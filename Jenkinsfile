@@ -1,5 +1,3 @@
-# Jenkinsfile code
-
 pipeline 
 {
 	agent any
@@ -9,20 +7,21 @@ pipeline
 	}
 	
 	stages{
-		stage('Welcome Stage')
+		stage('Welcome Master Branch')
+
 		{
 			steps
 			{
 				echo 'Welcome to Jenkins Pipeline'
 			}			
 		}
-		stage('Checkout') {
-            steps 
+		stage('Checkout') 
+		{
+        		steps 
 			{                
-                git 'https://github.com/hkshitesh/DEVOPS-B25.git'
-            }
-        }
-
+           			 git 'https://github.com/hkshitesh/DEVOPS-B25.git'
+        		}
+		}
 		stage('Clean Stage')
 		{
 			steps
